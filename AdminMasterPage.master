@@ -1,0 +1,89 @@
+﻿<%@ Master Language="VB" CodeFile="AdminMasterPage.master.vb" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="style1">
+            <tr>
+                <td colspan="3">
+                    <img src="images/Banner1.jpg" style="width: 1000px; height: 150px" /></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-color: #99FF66">
+                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" 
+                        Font-Names="Century Schoolbook" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/AdminHome.aspx" Text="Home |" Value="Home |">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Users.aspx" Text="Craete User| " 
+                                Value="Craete us | "></asp:MenuItem>
+                            <asp:MenuItem 
+                                Text="House Registeration | " Value="House Registeration | " 
+                                NavigateUrl="~/HouseRegisteration.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/bankReg.aspx" Text="Bank Registeration |" 
+                                Value="Bank Registeration |"></asp:MenuItem>
+                            <asp:MenuItem Text="Reports |" Value="Reports |">
+                                <asp:MenuItem Text="Payment report" 
+                                    Value="Payment report">
+                                    <asp:MenuItem NavigateUrl="~/PaymentReportShow.aspx" Text="General" 
+                                        Value="General"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Indivitual" Value="Indivitual">
+                                    </asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem 
+                                    Text="Tax Payer report " Value="Tax Payer report ">
+                                    <asp:MenuItem NavigateUrl="~/TaxpayersReportDisplay.aspx" Text="Genaral Reort" 
+                                        Value="Genaral Reort"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/TaxayerIndivitualReort.aspx" Text="Indivitual" 
+                                        Value="Indivitual"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="House Report" Value="House Report">
+                                    <asp:MenuItem NavigateUrl="~/HouseGeneralReort.aspx" Text="General" 
+                                        Value="General">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/HouseRT.aspx" Text="Indivitual" 
+                                        Value="Indivitual"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SettingTaxation.aspx" Text="setting taxation l" 
+                                Value="setting taxation l"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Logout" Value="Logout">
+                            </asp:MenuItem>
+                            <asp:MenuItem></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px; height: 500px; vertical-align: top">
+                    <img src="images/left.jpg" style="width: 200px; height: 500px" /></td>
+                <td style="width: 600px; height: 500px" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="width: 200px; height: 500px; vertical-align: top">
+                    <img src="images/right.jpg" style="width: 200px; height: 500px" /></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-color: #FF6699">
+                    &nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
